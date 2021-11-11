@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Optima;
+}
+
+.main {
+    display: flex;
+    flex-flow: column;
+}
+
+.input {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;;
+}
+
+.play {
+    display: flex;
+    justify-content: center;
+    margin-top: 12rem;
+}
+.status {
+    min-height: 5rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input input {
+    padding: 0.4rem 0.4rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Optima;
+    letter-spacing: 0.2rem;
+    /* font-variant: small-caps; */
+    border-radius: 1.3rem;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.box {
+    width: 4rem;
+    height: 4rem;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid black;
+    margin-right: 1rem;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
