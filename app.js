@@ -1,9 +1,12 @@
 let question = document.querySelector('.input input');
 let playGround = document.querySelector('.play');
+let timerDiv = document.querySelector('.timer');
 let cluePositions = [];
 let word = '';
 let maxTries = 0;
 let userTries = 0;
+let counter = 0;
+let timer = null;
 let App = {};
 
 
@@ -61,6 +64,10 @@ function updateStatus() {
     }
     if (_word == word.toUpperCase()) {
         message = '<h3> You win! </h3>';
+        clearInterval(timer);
+    }
+    if (userTries >= maxTries) {
+        clearInterval(timer);
     }
     let d = document.createElement('span');
     d.innerHTML = message;
@@ -88,4 +95,12 @@ function startGame() {
         node.value = word[e];
         node.disabled= true;
     });
+    timer = setInterval(startTimer, 1000);
+}
+
+function startTimer() {
+    counter += 1;
+    let sec = (counter % 60).toString().padStart(2, '0');
+    let min = Math.floor(counter / 60).toString().padStart(2, '0');
+    timerDiv.innerHTML = `<span>${min}:${sec}</span>`;
 }

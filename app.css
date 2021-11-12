@@ -52,3 +52,11 @@
     text-transform: uppercase;
     text-align: center;
 }
+
+.timer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    align-self: flex-end;
+    font-size: 2rem;
+}
